@@ -1,6 +1,6 @@
 // ==============================================================================
 // Next.js Root Layout (Pure JavaScript / JSX)
-// Provides global font loading, dark academic styling, and consistent layout shell
+// Provides global font loading, elegant light academic styling, and consistent layout shell
 // ==============================================================================
 
 import React from 'react';
@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className="bg-[#0B0F19] text-slate-300 font-inter antialiased min-h-screen flex flex-col selection:bg-[#D4AF37]/30 selection:text-[#E5C07B]">
+      <body className="bg-slate-50 text-slate-800 font-inter antialiased min-h-screen flex flex-col selection:bg-amber-100 selection:text-amber-900">
         {children}
       </body>
     </html>

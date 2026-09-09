@@ -134,7 +134,7 @@ export default function EditorActionPanel({
 
       {/* --- MODAL 1: ASSIGN REVIEWER --- */}
       {isAssignOpen && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 bg-slate-900/60 flex items-center justify-center p-4">
           <div className="bg-[#141B2D] border border-slate-700 rounded-2xl w-full max-w-lg p-6 shadow-2xl relative">
             <button
               type="button"
@@ -228,7 +228,7 @@ export default function EditorActionPanel({
 
       {/* --- MODAL 2: ISSUE EDITORIAL DECISION --- */}
       {isDecisionOpen && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 bg-slate-900/60 flex items-center justify-center p-4">
           <div className="bg-[#141B2D] border border-slate-700 rounded-2xl w-full max-w-lg p-6 shadow-2xl relative">
             <button
               type="button"

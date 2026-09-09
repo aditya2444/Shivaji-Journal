@@ -75,7 +75,7 @@ export default function ReviewScorecardModal({ reviewId, paperTitle, trackingId 
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div className="fixed inset-0 z-50 bg-slate-900/60 flex items-center justify-center p-4 overflow-y-auto">
           <div className="bg-[#141B2D] border border-slate-700 rounded-2xl w-full max-w-2xl p-6 sm:p-8 shadow-2xl relative my-8">
             <button
               type="button"

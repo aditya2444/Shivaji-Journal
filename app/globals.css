@@ -4,18 +4,21 @@
 
 @layer base {
   :root {
-    --bg-dark-base: #0B0F19;
-    --bg-dark-surface: #141B2D;
-    --bg-dark-card: #182238;
-    --gold-primary: #D4AF37;
-    --gold-hover: #F59E0B;
+    --bg-base: #F8FAFC;
+    --bg-surface: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --text-primary: #0F172A;
+    --text-secondary: #334155;
+    --text-muted: #64748B;
+    --gold-primary: #854D0E;
+    --gold-hover: #A16207;
     --burgundy-primary: #881337;
-    --burgundy-hover: #BE123C;
+    --burgundy-hover: #9F1239;
   }
 
   body {
-    background-color: var(--bg-dark-base);
-    color: #94A3B8;
+    background-color: var(--bg-base);
+    color: var(--text-secondary);
   }
 }
 

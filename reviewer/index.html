@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +10,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        dark: { 950: '#070A10', 900: '#0B0F19', 800: '#0E131F', 700: '#141B2D', 600: '#182238' },
-                        gold: { 400: '#E5C07B', 500: '#F59E0B', 600: '#D4AF37' },
                         burgundy: { 700: '#BE123C', 800: '#9F1239', 900: '#881337' }
                     },
                     fontFamily: {
@@ -29,28 +26,28 @@
         }
     </script>
 </head>
-<body class="bg-dark-900 text-slate-300 font-inter antialiased min-h-screen py-8 px-4 sm:px-6 lg:px-8 selection:bg-gold-600/30 selection:text-gold-400">
+<body class="bg-slate-50 text-slate-800 font-inter antialiased min-h-screen py-8 px-4 sm:px-6 lg:px-8 selection:bg-amber-100 selection:text-amber-900">
 
     <!-- Header Navigation -->
-    <header class="max-w-7xl mx-auto pb-6 mb-8 border-b border-slate-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+    <header class="max-w-7xl mx-auto pb-6 mb-8 border-b border-slate-200 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
             <div class="flex items-center gap-3">
-                <a href="/" class="text-xs font-mono text-slate-400 hover:text-gold-400 flex items-center gap-1">
+                <a href="/" class="text-xs font-mono text-slate-500 hover:text-amber-800 flex items-center gap-1 transition-colors">
                     <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i> Home
                 </a>
-                <span class="text-slate-700">/</span>
-                <span class="text-xs font-mono text-gold-400">Reviewer Workspace</span>
+                <span class="text-slate-300">/</span>
+                <span class="text-xs font-mono text-amber-800 font-semibold">Reviewer Workspace</span>
             </div>
-            <h1 class="text-2xl font-cinzel font-bold text-white mt-1">Reviewer Portal</h1>
-            <p class="text-xs text-slate-400 font-mono mt-0.5">Referee Station • Prof. S. Sen (External Peer Evaluator)</p>
+            <h1 class="text-2xl font-cinzel font-bold text-slate-900 mt-1">Reviewer Portal</h1>
+            <p class="text-xs text-slate-500 font-mono mt-0.5">Referee Station • Prof. S. Sen (External Peer Evaluator)</p>
         </div>
 
         <div class="flex items-center gap-3">
-            <div class="px-3 py-1.5 rounded-lg bg-emerald-950/40 border border-emerald-800/60 text-emerald-300 text-xs font-mono flex items-center gap-1.5">
-                <i data-lucide="shield" class="w-3.5 h-3.5 text-emerald-400"></i>
+            <div class="px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs font-mono flex items-center gap-1.5 font-medium">
+                <i data-lucide="shield" class="w-3.5 h-3.5 text-emerald-700"></i>
                 <span>Double-Blind Active</span>
             </div>
-            <a href="/login/" class="px-3.5 py-2 rounded-lg bg-dark-800 border border-slate-700 hover:border-red-500/50 text-xs font-mono text-slate-400 hover:text-red-400 transition-colors flex items-center gap-1.5">
+            <a href="/login/" class="px-3.5 py-2 rounded-lg bg-white border border-slate-300 hover:border-red-400 text-xs font-mono text-slate-600 hover:text-red-700 shadow-sm transition-colors flex items-center gap-1.5">
                 <i data-lucide="log-out" class="w-3.5 h-3.5"></i> Sign Out
             </a>
         </div>
@@ -58,63 +55,63 @@
 
     <div class="max-w-7xl mx-auto space-y-8">
         <!-- Reviewer Guidelines Banner -->
-        <div class="bg-[#152238] border border-gold-500/30 rounded-2xl p-6 shadow-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div class="bg-[#152238] border border-amber-900/30 rounded-2xl p-6 shadow-md flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <div class="space-y-1">
-                <span class="text-xs font-mono text-gold-400 uppercase tracking-widest font-semibold block">Double-Blind Peer Review Protocol</span>
+                <span class="text-xs font-mono text-amber-400 uppercase tracking-widest font-bold block">Double-Blind Peer Review Protocol</span>
                 <h2 class="text-base font-cinzel font-bold text-white">Anonymized Referee Evaluation Station</h2>
-                <p class="text-xs text-slate-400 max-w-3xl">
+                <p class="text-xs text-slate-300 max-w-3xl">
                     In compliance with international COPE and UGC-CARE standards, author identities, affiliations, and cover letters are strictly concealed from reviewers. Please evaluate based strictly on methodological rigor, scholarly novelty, and presentation clarity.
                 </p>
             </div>
-            <a href="mailto:shivraj350@shivaji.du.ac.in" class="text-xs font-mono text-gold-400 hover:underline shrink-0">
+            <a href="mailto:shivraj350@shivaji.du.ac.in" class="text-xs font-mono text-amber-400 hover:underline shrink-0 font-medium">
                 shivraj350@shivaji.du.ac.in
             </a>
         </div>
 
         <!-- Assigned Manuscripts Card -->
-        <div class="bg-dark-700 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl">
-            <div class="flex justify-between items-center pb-6 border-b border-slate-800">
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+            <div class="flex justify-between items-center pb-6 border-b border-slate-200">
                 <div>
-                    <h2 class="text-lg font-cinzel font-bold text-white">Assigned Manuscripts for Review</h2>
-                    <p class="text-xs text-slate-400">1 manuscript pending your evaluation</p>
+                    <h2 class="text-lg font-cinzel font-bold text-slate-900">Assigned Manuscripts for Review</h2>
+                    <p class="text-xs text-slate-500">1 manuscript pending your evaluation</p>
                 </div>
-                <span class="text-xs font-mono text-amber-400 bg-amber-950/60 px-3 py-1 rounded border border-amber-800">
+                <span class="text-xs font-mono text-amber-900 bg-amber-50 px-3 py-1 rounded border border-amber-300 font-medium">
                     Deadline: 14 Days Remaining
                 </span>
             </div>
 
             <div class="mt-6 space-y-6">
                 <!-- Manuscript Item -->
-                <div class="p-6 rounded-xl bg-dark-900/80 border border-slate-800 space-y-4">
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-4">
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                         <div class="flex items-center gap-3">
-                            <span class="text-xs font-mono text-gold-400 font-bold bg-dark-800 px-2.5 py-1 rounded border border-gold-500/30">
+                            <span class="text-xs font-mono text-amber-900 font-bold bg-amber-100/70 px-2.5 py-1 rounded border border-amber-300">
                                 SHIVRAJ-2026-MS-0042
                             </span>
                             <span class="text-xs font-mono text-slate-500">Domain: Computer Science & AI</span>
                         </div>
-                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-amber-950/80 border border-amber-800 text-amber-300">
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-amber-50 border border-amber-300 text-amber-800 font-medium">
                             Evaluation Pending
                         </span>
                     </div>
 
-                    <h3 class="text-base sm:text-lg font-playfair font-semibold text-white">
+                    <h3 class="text-base sm:text-lg font-playfair font-bold text-slate-900">
                         Deep Learning Approaches for Hindi Handwriting Recognition: A Comparative Study
                     </h3>
 
-                    <p class="text-xs text-slate-400 leading-relaxed">
+                    <p class="text-xs text-slate-600 leading-relaxed">
                         <strong>Abstract:</strong> This research analyzes character segmentation and recognition in handwritten Devanagari text through modified ResNet and Vision Transformer backbones. Rigorous ablation studies demonstrate high tolerance against stroke thickness variance and degradation.
                     </p>
 
-                    <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-800">
+                    <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-200">
                         <div class="flex items-center gap-3">
-                            <a href="/assets/Shivraj_350_Inaugural_Issue.pdf" target="_blank" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-dark-800 border border-slate-700 hover:border-gold-500 text-xs font-mono text-slate-300 hover:text-gold-400 transition-colors">
-                                <i data-lucide="download" class="w-3.5 h-3.5 text-gold-500"></i> Download Anonymized PDF
+                            <a href="/assets/Shivraj_350_Inaugural_Issue.pdf" target="_blank" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white border border-slate-300 hover:border-amber-700 text-xs font-mono text-slate-700 hover:text-amber-800 transition-colors shadow-sm font-medium">
+                                <i data-lucide="download" class="w-3.5 h-3.5 text-amber-700"></i> Download Anonymized PDF
                             </a>
                             <span class="text-[11px] text-slate-500 font-mono italic">Title page strictly barred</span>
                         </div>
 
-                        <button id="open-scorecard-btn" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-burgundy-800 hover:bg-burgundy-700 text-white text-xs font-semibold shadow-md transition-all">
+                        <button id="open-scorecard-btn" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-burgundy-900 hover:bg-burgundy-800 text-white text-xs font-semibold shadow-sm transition-all">
                             <i data-lucide="file-check-2" class="w-4 h-4"></i> Submit Review Scorecard
                         </button>
                     </div>
@@ -124,20 +121,20 @@
     </div>
 
     <!-- Review Scorecard Modal -->
-    <div id="scorecard-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-dark-700 border border-slate-700 rounded-2xl w-full max-w-2xl p-6 sm:p-8 shadow-2xl relative my-8">
-            <button id="close-modal-btn" class="absolute top-6 right-6 text-slate-400 hover:text-white">
+    <div id="scorecard-modal" class="fixed inset-0 z-50 bg-slate-900/60 hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white border border-slate-200 rounded-2xl w-full max-w-2xl p-6 sm:p-8 shadow-2xl relative my-8 text-slate-800">
+            <button id="close-modal-btn" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 transition-colors">
                 <i data-lucide="x" class="w-5 h-5"></i>
             </button>
 
             <div class="mb-6">
-                <span class="text-xs font-mono text-gold-400 uppercase tracking-widest font-semibold block mb-1">
+                <span class="text-xs font-mono text-amber-800 uppercase tracking-widest font-bold block mb-1">
                     CONFIDENTIAL PEER EVALUATION
                 </span>
-                <h3 class="text-xl font-cinzel font-bold text-white">
+                <h3 class="text-xl font-cinzel font-bold text-slate-900">
                     Referee Evaluation Scorecard
                 </h3>
-                <p class="text-xs text-slate-400 mt-1 font-mono">
+                <p class="text-xs text-slate-500 mt-1 font-mono">
                     Manuscript: SHIVRAJ-2026-MS-0042
                 </p>
             </div>
@@ -145,21 +142,21 @@
             <form id="scorecard-form" class="space-y-5">
                 <!-- Numeric Score -->
                 <div>
-                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 mb-2 font-medium">
                         Overall Scholarly Rating (1–10) *
                     </label>
                     <div class="flex items-center gap-4">
-                        <input type="range" id="score-range" min="1" max="10" value="8" class="w-full accent-gold-500 cursor-pointer">
-                        <span id="score-val" class="font-mono text-lg font-bold text-gold-400 w-8 text-center">8</span>
+                        <input type="range" id="score-range" min="1" max="10" value="8" class="w-full accent-amber-800 cursor-pointer">
+                        <span id="score-val" class="font-mono text-lg font-bold text-amber-800 w-8 text-center">8</span>
                     </div>
                 </div>
 
                 <!-- Recommendation -->
                 <div>
-                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 mb-2 font-medium">
                         Formal Editorial Recommendation *
                     </label>
-                    <select id="recommendation" required class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
+                    <select id="recommendation" required class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-amber-700">
                         <option value="ACCEPT">Accept Without Revisions</option>
                         <option value="MINOR_REVISION">Accept with Minor Revisions</option>
                         <option value="MAJOR_REVISION">Major Revisions Required</option>
@@ -169,33 +166,33 @@
 
                 <!-- Feedback to Author -->
                 <div>
-                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-1.5">
+                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 mb-1.5 font-medium">
                         Constructive Comments to Author(s) *
                     </label>
-                    <textarea id="comments-author" rows="4" required placeholder="Detail specific strengths, methodological critiques, and recommended improvements..." class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500 resize-none">The experimental results are solid and well-benchmarked. Please expand on the computational complexity during inference on mobile devices and clarify the hyperparameter tuning in Section 3.2.</textarea>
+                    <textarea id="comments-author" rows="4" required placeholder="Detail specific strengths, methodological critiques, and recommended improvements..." class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-amber-700 resize-none">The experimental results are solid and well-benchmarked. Please expand on the computational complexity during inference on mobile devices and clarify the hyperparameter tuning in Section 3.2.</textarea>
                 </div>
 
                 <!-- Confidential Notes to Editor -->
                 <div>
-                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-1.5">
+                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 mb-1.5 font-medium">
                         Confidential Remarks to Chief Editor (Optional)
                     </label>
-                    <textarea id="comments-editor" rows="2" placeholder="Private assessment visible only to the Editorial Board..." class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500 resize-none">Solid contribution for Vol. 1, Issue 2. Author should be asked to format equations according to journal style guide.</textarea>
+                    <textarea id="comments-editor" rows="2" placeholder="Private assessment visible only to the Editorial Board..." class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-amber-700 resize-none">Solid contribution for Vol. 1, Issue 2. Author should be asked to format equations according to journal style guide.</textarea>
                 </div>
 
                 <!-- Actions -->
-                <div class="pt-3 flex justify-end gap-3 border-t border-slate-800">
-                    <button type="button" id="cancel-modal-btn" class="px-4 py-2 rounded-lg bg-dark-800 text-slate-300 text-xs font-medium hover:bg-dark-600">
+                <div class="pt-3 flex justify-end gap-3 border-t border-slate-200">
+                    <button type="button" id="cancel-modal-btn" class="px-4 py-2 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium hover:bg-slate-200 transition-colors">
                         Cancel
                     </button>
-                    <button type="submit" id="submit-evaluation-btn" class="px-6 py-2 rounded-lg bg-burgundy-800 hover:bg-burgundy-700 text-white text-xs font-semibold shadow transition-colors">
+                    <button type="submit" id="submit-evaluation-btn" class="px-6 py-2 rounded-lg bg-burgundy-900 hover:bg-burgundy-800 text-white text-xs font-semibold shadow-sm transition-colors">
                         Submit Final Scorecard
                     </button>
                 </div>
             </form>
 
-            <div id="scorecard-success" class="hidden p-4 mt-4 rounded-xl bg-emerald-950/60 border border-emerald-700 text-emerald-300 text-xs flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400"></i>
+            <div id="scorecard-success" class="hidden p-4 mt-4 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs flex items-center gap-2 font-medium">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-700"></i>
                 <span>Evaluation submitted successfully. Status automatically transitioned to "DECISION_PENDING".</span>
             </div>
         </div>
@@ -234,7 +231,7 @@
                 lucide.createIcons();
                 setTimeout(() => {
                     closeModal();
-                    openBtn.outerHTML = '<span class="text-xs font-mono text-emerald-400 bg-emerald-950/40 px-3 py-1.5 rounded border border-emerald-800">Scorecard Submitted ✓</span>';
+                    openBtn.outerHTML = '<span class="text-xs font-mono text-emerald-800 bg-emerald-50 px-3 py-1.5 rounded border border-emerald-300 font-medium">Scorecard Submitted ✓</span>';
                 }, 1500);
             }, 800);
         });

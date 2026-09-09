@@ -30,33 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Theme Toggle (Light / Dark) ---
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-
-    const syncThemeIcons = () => {
-        const isLight = document.body.classList.contains('light-mode');
-        document.querySelectorAll('.theme-icon-sun').forEach(el => {
-            el.classList.toggle('hidden', isLight);
-        });
-        document.querySelectorAll('.theme-icon-moon').forEach(el => {
-            el.classList.toggle('hidden', !isLight);
-        });
-    };
-
-    const toggleTheme = () => {
-        document.body.classList.toggle('light-mode');
-        const isLight = document.body.classList.contains('light-mode');
-        localStorage.setItem('theme', isLight ? 'light' : 'dark');
-        syncThemeIcons();
-    };
-
-    // Sync icons on initial load (anti-flash script may have already set class)
-    syncThemeIcons();
-
-    if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
-    if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
-
     // --- Sticky Header & Back to Top ---
     const header = document.getElementById('main-header');
     const backToTopBtn = document.getElementById('back-to-top');

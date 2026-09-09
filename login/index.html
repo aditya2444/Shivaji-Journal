@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +10,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        dark: { 950: '#070A10', 900: '#0B0F19', 800: '#0E131F', 700: '#141B2D', 600: '#182238' },
-                        gold: { 400: '#E5C07B', 500: '#F59E0B', 600: '#D4AF37' },
                         burgundy: { 700: '#BE123C', 800: '#9F1239', 900: '#881337' }
                     },
                     fontFamily: {
@@ -29,19 +26,19 @@
         }
     </script>
 </head>
-<body class="bg-dark-900 text-slate-300 font-inter antialiased min-h-screen flex flex-col justify-between selection:bg-gold-600/30 selection:text-gold-400">
+<body class="bg-slate-50 text-slate-800 font-inter antialiased min-h-screen flex flex-col justify-between selection:bg-amber-100 selection:text-amber-900">
 
     <!-- Top Navigation Header -->
-    <header class="py-6 px-4 sm:px-8 border-b border-slate-800/80 bg-dark-950/70 backdrop-blur-md">
+    <header class="py-5 px-4 sm:px-8 border-b border-slate-200 bg-white shadow-sm">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <a href="/" class="inline-flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-gold-400 transition-colors">
+            <a href="/" class="inline-flex items-center gap-2 text-xs font-mono text-slate-600 hover:text-amber-800 transition-colors font-medium">
                 <i data-lucide="chevron-left" class="w-4 h-4"></i>
                 <span>Back to Journal Home</span>
             </a>
             <div class="flex items-center gap-4">
-                <a href="/submit/" class="text-xs font-mono text-gold-400 hover:underline">Direct Paper Submission</a>
-                <span class="text-slate-600 text-xs font-mono">|</span>
-                <a href="mailto:shivraj350@shivaji.du.ac.in" class="text-xs font-mono text-slate-400 hover:text-white">
+                <a href="/submit/" class="text-xs font-mono text-amber-800 hover:underline font-semibold">Direct Paper Submission</a>
+                <span class="text-slate-300 text-xs font-mono">|</span>
+                <a href="mailto:shivraj350@shivaji.du.ac.in" class="text-xs font-mono text-slate-600 hover:text-slate-900">
                     shivraj350@shivaji.du.ac.in
                 </a>
             </div>
@@ -50,40 +47,38 @@
 
     <!-- Main Authentication Box -->
     <main class="flex-1 flex items-center justify-center p-4 sm:p-6 my-8">
-        <div class="w-full max-w-xl bg-dark-700 border border-gold-500/30 rounded-2xl shadow-2xl p-8 sm:p-10 relative overflow-hidden">
-            <!-- Ambient glow -->
-            <div class="absolute -top-24 -right-24 w-60 h-60 bg-burgundy-900/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="w-full max-w-xl bg-white border border-slate-200 rounded-2xl shadow-xl p-8 sm:p-10 relative">
 
             <!-- College Crest & Branding -->
             <div class="text-center mb-8">
-                <span class="text-xs font-mono text-gold-400 uppercase tracking-widest font-semibold block mb-1">
+                <span class="text-xs font-mono text-amber-800 uppercase tracking-widest font-bold block mb-1">
                     WORKFLOW PORTAL
                 </span>
-                <h1 class="text-2xl sm:text-3xl font-cinzel font-bold text-white mb-2" id="portal-title">
+                <h1 class="text-2xl sm:text-3xl font-cinzel font-bold text-slate-900 mb-2" id="portal-title">
                     Author Dashboard Login
                 </h1>
-                <p class="text-xs text-slate-400">
+                <p class="text-xs text-slate-500">
                     Shivaji College, University of Delhi • Peer-Review Platform
                 </p>
             </div>
 
             <!-- Role Selector Tabs -->
-            <div class="grid grid-cols-3 gap-2 p-1.5 bg-dark-900 rounded-xl border border-slate-800 mb-6">
-                <button type="button" class="role-tab py-2.5 px-3 rounded-lg text-xs font-medium transition-all text-gold-400 bg-dark-800 border border-gold-500/40" data-role="author">
+            <div class="grid grid-cols-3 gap-2 p-1.5 bg-slate-100 rounded-xl border border-slate-200 mb-6">
+                <button type="button" class="role-tab py-2.5 px-3 rounded-lg text-xs font-semibold transition-all text-slate-900 bg-white shadow-sm border border-slate-300" data-role="author">
                     Author
                 </button>
-                <button type="button" class="role-tab py-2.5 px-3 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-slate-200" data-role="reviewer">
+                <button type="button" class="role-tab py-2.5 px-3 rounded-lg text-xs font-medium transition-all text-slate-600 hover:text-slate-900" data-role="reviewer">
                     Reviewer
                 </button>
-                <button type="button" class="role-tab py-2.5 px-3 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-slate-200" data-role="editor">
+                <button type="button" class="role-tab py-2.5 px-3 rounded-lg text-xs font-medium transition-all text-slate-600 hover:text-slate-900" data-role="editor">
                     Editor
                 </button>
             </div>
 
             <!-- Dynamic Role Description Card -->
-            <div id="role-info-card" class="bg-dark-900/80 border border-slate-800 rounded-xl p-4 mb-6">
-                <h3 class="text-sm font-semibold text-slate-200 mb-1" id="role-heading">Author Self-Service Station</h3>
-                <p class="text-xs text-slate-400 leading-relaxed" id="role-description">
+            <div id="role-info-card" class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6">
+                <h3 class="text-sm font-semibold text-slate-900 mb-1" id="role-heading">Author Self-Service Station</h3>
+                <p class="text-xs text-slate-600 leading-relaxed" id="role-description">
                     Track the lifecycle of your submitted papers, review evaluation scorecards, and upload revised camera-ready manuscripts.
                 </p>
             </div>
@@ -91,24 +86,24 @@
             <!-- Login Form -->
             <form id="login-form" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-1.5">
+                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 mb-1.5 font-medium">
                         Institutional Email Address *
                     </label>
-                    <input type="email" id="login-email" required value="author@shivaji.du.ac.in" class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                    <input type="email" id="login-email" required value="author@shivaji.du.ac.in" class="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-amber-700 focus:ring-1 focus:ring-amber-700 transition-colors">
                 </div>
 
                 <div>
                     <div class="flex justify-between items-center mb-1.5">
-                        <label class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                        <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 font-medium">
                             Password *
                         </label>
-                        <a href="#" class="text-[11px] text-gold-400 hover:underline">Forgot?</a>
+                        <a href="#" class="text-[11px] text-amber-800 hover:underline font-medium">Forgot?</a>
                     </div>
-                    <input type="password" id="login-pwd" required value="••••••••••••" class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                    <input type="password" id="login-pwd" required value="••••••••••••" class="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-amber-700 focus:ring-1 focus:ring-amber-700 transition-colors">
                 </div>
 
                 <div class="pt-2">
-                    <button type="submit" id="login-btn" class="w-full py-3.5 px-6 rounded-xl bg-burgundy-800 hover:bg-burgundy-700 text-white text-sm font-semibold shadow-lg shadow-burgundy-900/50 transition-all flex justify-center items-center gap-2">
+                    <button type="submit" id="login-btn" class="w-full py-3.5 px-6 rounded-xl bg-burgundy-900 hover:bg-burgundy-800 text-white text-sm font-semibold shadow-md transition-all flex justify-center items-center gap-2">
                         <i data-lucide="log-in" class="w-4 h-4"></i>
                         <span id="btn-label">Sign In to Author Dashboard</span>
                     </button>
@@ -116,9 +111,9 @@
             </form>
 
             <!-- Direct Submit Alternative -->
-            <div class="mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-400">
+            <div class="mt-8 pt-6 border-t border-slate-200 text-center text-xs text-slate-600">
                 <span>Looking to submit a first draft without an account?</span>
-                <a href="/submit/" class="text-gold-400 hover:underline font-semibold ml-1 block sm:inline mt-1 sm:mt-0">
+                <a href="/submit/" class="text-amber-800 hover:underline font-semibold ml-1 block sm:inline mt-1 sm:mt-0">
                     Use Direct Option to Submit →
                 </a>
             </div>
@@ -126,8 +121,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-6 px-4 border-t border-slate-800/80 text-center text-xs text-slate-500 font-mono">
-        Official Workflow Portal • Shivaji College, University of Delhi • Direct Inquiries: <a href="mailto:shivraj350@shivaji.du.ac.in" class="text-gold-400 hover:underline">shivraj350@shivaji.du.ac.in</a>
+    <footer class="py-6 px-4 border-t border-slate-200 text-center text-xs text-slate-500 font-mono bg-white">
+        Official Workflow Portal • Shivaji College, University of Delhi • Direct Inquiries: <a href="mailto:shivraj350@shivaji.du.ac.in" class="text-amber-800 hover:underline">shivraj350@shivaji.du.ac.in</a>
     </footer>
 
     <!-- Scripts -->
@@ -185,11 +180,14 @@
 
             tabs.forEach(tab => {
                 const active = tab.dataset.role === role;
-                tab.classList.toggle('text-gold-400', active);
-                tab.classList.toggle('bg-dark-800', active);
+                tab.classList.toggle('text-slate-900', active);
+                tab.classList.toggle('bg-white', active);
+                tab.classList.toggle('shadow-sm', active);
                 tab.classList.toggle('border', active);
-                tab.classList.toggle('border-gold-500/40', active);
-                tab.classList.toggle('text-slate-400', !active);
+                tab.classList.toggle('border-slate-300', active);
+                tab.classList.toggle('font-semibold', active);
+                tab.classList.toggle('text-slate-600', !active);
+                tab.classList.toggle('font-medium', !active);
             });
         };
 
