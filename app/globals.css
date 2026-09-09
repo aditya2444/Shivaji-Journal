@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-dark-base: #0B0F19;
+    --bg-dark-surface: #141B2D;
+    --bg-dark-card: #182238;
+    --gold-primary: #D4AF37;
+    --gold-hover: #F59E0B;
+    --burgundy-primary: #881337;
+    --burgundy-hover: #BE123C;
+  }
+
+  body {
+    background-color: var(--bg-dark-base);
+    color: #94A3B8;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}

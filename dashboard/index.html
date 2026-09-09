@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author Dashboard | Shivraj 350 Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: { 950: '#070A10', 900: '#0B0F19', 800: '#0E131F', 700: '#141B2D', 600: '#182238' },
+                        gold: { 400: '#E5C07B', 500: '#F59E0B', 600: '#D4AF37' },
+                        burgundy: { 700: '#BE123C', 800: '#9F1239', 900: '#881337' }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-900 text-slate-300 font-inter antialiased min-h-screen py-8 px-4 sm:px-6 lg:px-8 selection:bg-gold-600/30 selection:text-gold-400">
+
+    <!-- Dashboard Top Bar -->
+    <header class="max-w-7xl mx-auto pb-6 mb-8 border-b border-slate-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+            <div class="flex items-center gap-3">
+                <a href="/" class="text-xs font-mono text-slate-400 hover:text-gold-400 flex items-center gap-1">
+                    <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i> Home
+                </a>
+                <span class="text-slate-700">/</span>
+                <span class="text-xs font-mono text-gold-400">Author Console</span>
+            </div>
+            <h1 class="text-2xl font-cinzel font-bold text-white mt-1">Author Dashboard</h1>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">Welcome, Dr. Rajesh Sharma • Dept. of Computer Science</p>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <a href="/submit/" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-burgundy-800 hover:bg-burgundy-700 text-white text-xs font-semibold shadow-md transition-all">
+                <i data-lucide="plus-circle" class="w-4 h-4"></i> Submit New Manuscript
+            </a>
+            <a href="/login/" class="px-3.5 py-2 rounded-lg bg-dark-800 border border-slate-700 hover:border-red-500/50 text-xs font-mono text-slate-400 hover:text-red-400 transition-colors flex items-center gap-1.5">
+                <i data-lucide="log-out" class="w-3.5 h-3.5"></i> Sign Out
+            </a>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto space-y-8">
+        <!-- Stat KPI Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-dark-700 border border-slate-800 rounded-xl p-5">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono uppercase text-slate-400">Total Submissions</span>
+                    <i data-lucide="file-text" class="w-4 h-4 text-gold-500"></i>
+                </div>
+                <div class="text-2xl font-bold text-white mt-2">2</div>
+                <span class="text-[11px] text-slate-500 mt-1 block">Lifetime submissions registered</span>
+            </div>
+
+            <div class="bg-dark-700 border border-slate-800 rounded-xl p-5">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono uppercase text-slate-400">Under Review</span>
+                    <i data-lucide="clock" class="w-4 h-4 text-amber-400"></i>
+                </div>
+                <div class="text-2xl font-bold text-amber-300 mt-2">1</div>
+                <span class="text-[11px] text-slate-500 mt-1 block">Active double-blind evaluation</span>
+            </div>
+
+            <div class="bg-dark-700 border border-slate-800 rounded-xl p-5">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono uppercase text-slate-400">Revision Required</span>
+                    <i data-lucide="alert-circle" class="w-4 h-4 text-orange-400"></i>
+                </div>
+                <div class="text-2xl font-bold text-orange-300 mt-2">0</div>
+                <span class="text-[11px] text-slate-500 mt-1 block">Awaiting camera-ready updates</span>
+            </div>
+
+            <div class="bg-dark-700 border border-slate-800 rounded-xl p-5">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono uppercase text-slate-400">Accepted & Published</span>
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+                </div>
+                <div class="text-2xl font-bold text-emerald-300 mt-2">1</div>
+                <span class="text-[11px] text-slate-500 mt-1 block">Indexed in Vol. 1, Issue 1</span>
+            </div>
+        </div>
+
+        <!-- Manuscript Lifecycle Feed -->
+        <div class="bg-dark-700 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-6 border-b border-slate-800 gap-4">
+                <div>
+                    <h2 class="text-lg font-cinzel font-bold text-white">Your Submitted Manuscripts</h2>
+                    <p class="text-xs text-slate-400">Real-time status tracking and reviewer decision notes</p>
+                </div>
+                <div class="flex items-center gap-2 text-xs font-mono text-slate-400">
+                    <i data-lucide="shield" class="w-3.5 h-3.5 text-emerald-400"></i>
+                    <span>Double-blind anonymity strictly active</span>
+                </div>
+            </div>
+
+            <!-- Manuscripts List -->
+            <div class="divide-y divide-slate-800/80 mt-2">
+                <!-- Item 1: In Review -->
+                <div class="py-6 space-y-4">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-mono text-gold-400 font-bold bg-dark-900 px-2.5 py-1 rounded border border-gold-500/30">
+                                SHIVRAJ-2026-MS-0042
+                            </span>
+                            <span class="text-xs font-mono text-slate-500">Submitted: Sept 04, 2026</span>
+                        </div>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-amber-950/80 border border-amber-800 text-amber-300">
+                            In Peer Review
+                        </span>
+                    </div>
+
+                    <h3 class="text-base sm:text-lg font-playfair font-semibold text-white">
+                        Deep Learning Approaches for Hindi Handwriting Recognition: A Comparative Study
+                    </h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        This paper presents a novel convolutional neural network architecture tailored to Devanagari script variations, yielding a 97.4% character accuracy benchmark across Delhi public school datasets.
+                    </p>
+
+                    <!-- Review Milestones Progress Bar -->
+                    <div class="bg-dark-900/80 border border-slate-800 rounded-xl p-4">
+                        <span class="text-[11px] font-mono text-slate-400 block mb-2">Review Progress Tracking</span>
+                        <div class="grid grid-cols-4 gap-2 text-center text-[10px] font-mono">
+                            <div class="bg-emerald-950/60 border border-emerald-800 text-emerald-300 py-1.5 rounded">
+                                1. Ingestion ✓
+                            </div>
+                            <div class="bg-emerald-950/60 border border-emerald-800 text-emerald-300 py-1.5 rounded">
+                                2. Plagiarism Clean ✓
+                            </div>
+                            <div class="bg-amber-950/80 border border-amber-700 text-amber-300 py-1.5 rounded animate-pulse">
+                                3. External Reviewers ⟳
+                            </div>
+                            <div class="bg-dark-800 text-slate-500 py-1.5 rounded">
+                                4. Decision
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Published -->
+                <div class="py-6 space-y-4">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-mono text-gold-400 font-bold bg-dark-900 px-2.5 py-1 rounded border border-gold-500/30">
+                                SHIVRAJ-2026-MS-0003
+                            </span>
+                            <span class="text-xs font-mono text-slate-500">Published: Jan 2026</span>
+                        </div>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-teal-950/80 border border-teal-800 text-teal-300">
+                            Published • Vol. 1, Issue 1
+                        </span>
+                    </div>
+
+                    <h3 class="text-base sm:text-lg font-playfair font-semibold text-white">
+                        Distributed Ledger Frameworks for University Credential Verification
+                    </h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Evaluates tamper-resistant digital degree issuing for Indian higher education institutions with UGC compliance and zero-knowledge proof verification.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-3 pt-2">
+                        <span class="text-xs font-mono text-gold-500">DOI: 10.5281/zenodo.shivraj.2026.01</span>
+                        <a href="/assets/Shivraj_350_Inaugural_Issue.pdf" target="_blank" class="text-xs font-mono text-slate-300 hover:text-gold-400 flex items-center gap-1 border-b border-slate-700">
+                            <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

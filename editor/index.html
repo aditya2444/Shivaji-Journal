@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor Access Desk | Shivraj 350 Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: { 950: '#070A10', 900: '#0B0F19', 800: '#0E131F', 700: '#141B2D', 600: '#182238' },
+                        gold: { 400: '#E5C07B', 500: '#F59E0B', 600: '#D4AF37' },
+                        burgundy: { 700: '#BE123C', 800: '#9F1239', 900: '#881337' }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-900 text-slate-300 font-inter antialiased min-h-screen py-8 px-4 sm:px-6 lg:px-8 selection:bg-gold-600/30 selection:text-gold-400">
+
+    <!-- Top Bar -->
+    <header class="max-w-7xl mx-auto pb-6 mb-8 border-b border-slate-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+            <div class="flex items-center gap-3">
+                <a href="/" class="text-xs font-mono text-slate-400 hover:text-gold-400 flex items-center gap-1">
+                    <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i> Home
+                </a>
+                <span class="text-slate-700">/</span>
+                <span class="text-xs font-mono text-gold-400">Managing Editor Console</span>
+            </div>
+            <h1 class="text-2xl font-cinzel font-bold text-white mt-1">Editor Access Desk</h1>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">Prof. Rajesh Kumar • Chief & Managing Editor</p>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <span class="px-3 py-1.5 rounded-lg bg-burgundy-950/60 border border-burgundy-800/80 text-burgundy-300 text-xs font-mono flex items-center gap-1.5">
+                <i data-lucide="shield-alert" class="w-3.5 h-3.5 text-amber-400"></i>
+                <span>COI Enforcement Active</span>
+            </span>
+            <a href="/login/" class="px-3.5 py-2 rounded-lg bg-dark-800 border border-slate-700 hover:border-red-500/50 text-xs font-mono text-slate-400 hover:text-red-400 transition-colors flex items-center gap-1.5">
+                <i data-lucide="log-out" class="w-3.5 h-3.5"></i> Sign Out
+            </a>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto space-y-8">
+        <!-- Triage Summary Metrics -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-dark-700 border border-slate-800 rounded-xl p-5">
+                <div class="flex justify-between items-center text-xs font-mono uppercase text-slate-400">
+                    <span>Intake Queue</span>
+                    <i data-lucide="inbox" class="w-4 h-4 text-gold-500"></i>
+                </div>
+                <div class="text-2xl font-bold text-white mt-2">3</div>
+                <span class="text-[11px] text-slate-500 mt-1 block">New manuscripts awaiting triage</span>
+            </div>
+
+            <div class="bg-dark-700 border border-slate-800 rounded-xl p-5">
+                <div class="flex justify-between items-center text-xs font-mono uppercase text-slate-400">
+                    <span>Active Peer Reviews</span>
+                    <i data-lucide="users" class="w-4 h-4 text-amber-400"></i>
+                </div>
+                <div class="text-2xl font-bold text-amber-300 mt-2">5</div>
+                <span class="text-[11px] text-slate-500 mt-1 block">With external referee panel</span>
+            </div>
+
+            <div class="bg-dark-700 border border-slate-800 rounded-xl p-5">
+                <div class="flex justify-between items-center text-xs font-mono uppercase text-slate-400">
+                    <span>Decision Pending</span>
+                    <i data-lucide="alert-circle" class="w-4 h-4 text-purple-400"></i>
+                </div>
+                <div class="text-2xl font-bold text-purple-300 mt-2">1</div>
+                <span class="text-[11px] text-slate-500 mt-1 block">Scorecards returned by referees</span>
+            </div>
+
+            <div class="bg-dark-700 border border-slate-800 rounded-xl p-5">
+                <div class="flex justify-between items-center text-xs font-mono uppercase text-slate-400">
+                    <span>Accepted for Issue 2</span>
+                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+                </div>
+                <div class="text-2xl font-bold text-emerald-300 mt-2">8</div>
+                <span class="text-[11px] text-slate-500 mt-1 block">Scheduled for Dec 2026</span>
+            </div>
+        </div>
+
+        <!-- Editorial Intake Triage Queue -->
+        <div class="bg-dark-700 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl">
+            <div class="flex justify-between items-center pb-6 border-b border-slate-800">
+                <div>
+                    <h2 class="text-lg font-cinzel font-bold text-white">Editorial Triage & Decision Desk</h2>
+                    <p class="text-xs text-slate-400">Assign peer reviewers and issue formal editorial verdicts</p>
+                </div>
+                <a href="mailto:shivraj350@shivaji.du.ac.in" class="text-xs font-mono text-gold-400 hover:underline">
+                    shivraj350@shivaji.du.ac.in
+                </a>
+            </div>
+
+            <div class="mt-6 space-y-6">
+                <!-- Submission 1: Scorecard Received, Decision Ready -->
+                <div class="p-6 rounded-xl bg-dark-900/80 border border-slate-800 space-y-4">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                        <div class="flex items-center gap-3">
+                            <span class="text-xs font-mono text-gold-400 font-bold bg-dark-800 px-2.5 py-1 rounded border border-gold-500/30">
+                                SHIVRAJ-2026-MS-0042
+                            </span>
+                            <span class="text-xs font-mono text-slate-400">Author: Dr. Rajesh Sharma (Comp. Sci.)</span>
+                        </div>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-purple-950/80 border border-purple-800 text-purple-300">
+                            Decision Ready • Scorecard: 8/10
+                        </span>
+                    </div>
+
+                    <h3 class="text-base sm:text-lg font-playfair font-semibold text-white">
+                        Deep Learning Approaches for Hindi Handwriting Recognition: A Comparative Study
+                    </h3>
+
+                    <div class="p-4 rounded-lg bg-dark-800/80 border border-slate-700 text-xs space-y-2">
+                        <div class="flex items-center justify-between text-slate-400">
+                            <span>Referee Recommendation: <strong class="text-emerald-400">Accept with Minor Revisions</strong></span>
+                            <span>Score: 8 / 10</span>
+                        </div>
+                        <p class="text-slate-300 italic">"The experimental results are solid and well-benchmarked. Please expand on the computational complexity during inference..."</p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-800">
+                        <div class="flex items-center gap-3">
+                            <a href="/assets/Shivraj_350_Inaugural_Issue.pdf" target="_blank" class="text-xs font-mono text-slate-300 hover:text-gold-400 flex items-center gap-1 border-b border-slate-700">
+                                <i data-lucide="file-text" class="w-3.5 h-3.5 text-gold-500"></i> Full Submission Files
+                            </a>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <button id="btn-assign" class="px-4 py-2 rounded-lg bg-dark-800 border border-slate-700 hover:border-gold-500 text-xs font-semibold text-slate-200 flex items-center gap-1.5 transition-colors">
+                                <i data-lucide="user-plus" class="w-3.5 h-3.5 text-gold-500"></i> Re-assign Referee
+                            </button>
+                            <button id="btn-decide" class="px-5 py-2 rounded-lg bg-burgundy-800 hover:bg-burgundy-700 text-white text-xs font-semibold shadow flex items-center gap-1.5 transition-all">
+                                <i data-lucide="send" class="w-3.5 h-3.5"></i> Make Editorial Decision
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Editorial Decision Modal -->
+    <div id="decision-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-dark-700 border border-slate-700 rounded-2xl w-full max-w-xl p-6 sm:p-8 shadow-2xl relative">
+            <button id="close-decide-btn" class="absolute top-6 right-6 text-slate-400 hover:text-white">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <span class="text-xs font-mono text-gold-400 uppercase tracking-widest font-semibold block mb-1">
+                EXECUTIVE EDITORIAL VERDICT
+            </span>
+            <h3 class="text-xl font-cinzel font-bold text-white mb-4">
+                Issue Final Manuscript Decision
+            </h3>
+
+            <form id="decision-form" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-1.5">Decision *</label>
+                    <select id="verdict" class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
+                        <option value="ACCEPTED">ACCEPTED (Publish in Vol. 1, Issue 2)</option>
+                        <option value="REVISION_REQUIRED">REVISION REQUIRED (Author revisions requested)</option>
+                        <option value="REJECTED">DECLINED (Does not meet scope / criteria)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-1.5">Official Editorial Decision Letter *</label>
+                    <textarea id="decision-letter" rows="4" required class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500 resize-none">We are pleased to inform you that your manuscript has been provisionally accepted for publication in Shivraj 350. Please submit camera-ready copy incorporating referee remarks within 14 calendar days.</textarea>
+                </div>
+
+                <div class="pt-3 flex justify-end gap-3 border-t border-slate-800">
+                    <button type="button" id="cancel-decide-btn" class="px-4 py-2 rounded-lg bg-dark-800 text-slate-300 text-xs font-medium hover:bg-dark-600">Cancel</button>
+                    <button type="submit" id="submit-decision-btn" class="px-6 py-2 rounded-lg bg-burgundy-800 hover:bg-burgundy-700 text-white text-xs font-semibold shadow">Dispatch Official Notice</button>
+                </div>
+            </form>
+
+            <div id="decision-success" class="hidden p-4 mt-4 rounded-xl bg-emerald-950/60 border border-emerald-700 text-emerald-300 text-xs flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400"></i>
+                <span>Decision recorded and formal notification dispatched from shivraj350@shivaji.du.ac.in.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+        const decideModal = document.getElementById('decision-modal');
+        const openDecideBtn = document.getElementById('btn-decide');
+        const closeDecideBtn = document.getElementById('close-decide-btn');
+        const cancelDecideBtn = document.getElementById('cancel-decide-btn');
+        const decideForm = document.getElementById('decision-form');
+        const decideSuccess = document.getElementById('decision-success');
+        const submitDecideBtn = document.getElementById('submit-decision-btn');
+
+        openDecideBtn.addEventListener('click', () => decideModal.classList.remove('hidden'));
+        const closeDecide = () => decideModal.classList.add('hidden');
+        closeDecideBtn.addEventListener('click', closeDecide);
+        cancelDecideBtn.addEventListener('click', closeDecide);
+
+        decideForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            submitDecideBtn.disabled = true;
+            submitDecideBtn.textContent = 'Recording Decision...';
+            setTimeout(() => {
+                decideForm.classList.add('hidden');
+                decideSuccess.classList.remove('hidden');
+                lucide.createIcons();
+                setTimeout(() => {
+                    closeDecide();
+                    openDecideBtn.outerHTML = '<span class="text-xs font-mono text-emerald-400 bg-emerald-950/40 px-3 py-1.5 rounded border border-emerald-800">Accepted for Issue 2 ✓</span>';
+                }, 1500);
+            }, 800);
+        });
+
+        document.getElementById('btn-assign').addEventListener('click', () => {
+            alert('Referee Assignment Station: All external reviewers in roster are vetted against COI policies (non-author, non-department matches).');
+        });
+    </script>
+</body>
+</html>

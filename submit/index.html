@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Manuscript Submission | Shivraj 350 Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: { 950: '#070A10', 900: '#0B0F19', 800: '#0E131F', 700: '#141B2D', 600: '#182238' },
+                        gold: { 400: '#E5C07B', 500: '#F59E0B', 600: '#D4AF37' },
+                        burgundy: { 700: '#BE123C', 800: '#9F1239', 900: '#881337' }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-900 text-slate-300 font-inter antialiased min-h-screen py-10 px-4 sm:px-6 lg:px-8 selection:bg-gold-600/30 selection:text-gold-400">
+
+    <!-- Header Navigation -->
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center pb-8 border-b border-slate-800 gap-4">
+        <a href="/" class="inline-flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-gold-400 transition-colors">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i>
+            <span>Back to Journal Home</span>
+        </a>
+
+        <div class="flex items-center gap-3">
+            <a href="/login/" class="px-3.5 py-1.5 rounded-md bg-dark-700 border border-slate-700 hover:border-gold-500 text-xs font-mono text-slate-300 transition-colors">
+                Author Dashboard Login
+            </a>
+            <a href="mailto:shivraj350@shivaji.du.ac.in" class="text-xs font-mono text-gold-400 hover:underline">
+                shivraj350@shivaji.du.ac.in
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="max-w-6xl mx-auto mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Left: Submission Guidelines & Policy Highlights -->
+        <div class="lg:col-span-4 space-y-6">
+            <div class="bg-dark-700 border border-slate-800 rounded-2xl p-6 shadow-xl">
+                <span class="text-xs font-mono text-gold-400 uppercase tracking-widest font-semibold block mb-2">
+                    Direct Option to Submit
+                </span>
+                <h2 class="text-xl font-cinzel font-bold text-white mb-3">
+                    Submission Guidelines
+                </h2>
+                <p class="text-xs text-slate-400 leading-relaxed mb-6">
+                    Welcome to the official manuscript intake portal for Shivaji College, University of Delhi. Please ensure your files adhere to our double-blind review criteria.
+                </p>
+
+                <ul class="space-y-4 text-xs">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="file-check" class="w-4 h-4 text-gold-500 mt-0.5 shrink-0"></i>
+                        <div>
+                            <strong class="text-slate-200 block font-medium">1. Two Separate Files</strong>
+                            <span class="text-slate-400 leading-relaxed">
+                                Upload (a) a Title Page with author names & affiliations, and (b) an Anonymized Manuscript stripped of identifying details.
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0"></i>
+                        <div>
+                            <strong class="text-slate-200 block font-medium">2. Double-Blind Peer Review</strong>
+                            <span class="text-slate-400 leading-relaxed">
+                                Assigned reviewers never see your Title Page or institutional identities.
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="award" class="w-4 h-4 text-gold-500 mt-0.5 shrink-0"></i>
+                        <div>
+                            <strong class="text-slate-200 block font-medium">3. Zero Publication Fees</strong>
+                            <span class="text-slate-400 leading-relaxed">
+                                No Article Processing Charges (APC) for faculty and student researchers.
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="clock" class="w-4 h-4 text-amber-400 mt-0.5 shrink-0"></i>
+                        <div>
+                            <strong class="text-slate-200 block font-medium">4. 4–6 Week Decision Window</strong>
+                            <span class="text-slate-400 leading-relaxed">
+                                Real-time status tracker via your unique tracking ID sent to your email.
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="mt-8 pt-6 border-t border-slate-800">
+                    <div class="text-xs text-slate-400 flex items-center justify-between">
+                        <span>Queries? Contact Editorial Office</span>
+                    </div>
+                    <a href="mailto:shivraj350@shivaji.du.ac.in" class="mt-2 text-xs font-mono text-gold-400 hover:underline flex items-center gap-1.5">
+                        <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+                        <span>shivraj350@shivaji.du.ac.in</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Workflow Portal Quick Card -->
+            <div class="bg-[#152238] border border-gold-500/30 rounded-2xl p-6 shadow-xl">
+                <span class="text-xs font-mono text-gold-400 uppercase tracking-widest font-bold block mb-1">
+                    WORKFLOW PORTAL
+                </span>
+                <p class="text-xs text-slate-400 mb-4">Already submitted or assigned as referee?</p>
+                <div class="space-y-2.5">
+                    <a href="/login/" class="block text-sm font-playfair text-slate-200 hover:text-gold-300 border-b border-dotted border-gold-500/50 pb-0.5 transition-colors">
+                        Author Dashboard Login
+                    </a>
+                    <a href="/reviewer/" class="block text-sm font-playfair text-slate-200 hover:text-gold-300 border-b border-dotted border-gold-500/50 pb-0.5 transition-colors">
+                        Reviewer Portal
+                    </a>
+                    <a href="/editor/" class="block text-sm font-playfair text-slate-200 hover:text-gold-300 border-b border-dotted border-gold-500/50 pb-0.5 transition-colors">
+                        Editor Access
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Interactive Submission Form -->
+        <div class="lg:col-span-8 bg-dark-700 border border-slate-800 rounded-2xl p-8 sm:p-10 shadow-2xl">
+            <div class="mb-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-burgundy-900/30 border border-burgundy-700/50 text-burgundy-300 text-xs font-mono mb-3">
+                    <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-400"></i> Direct Submission Portal Active
+                </div>
+                <h1 class="text-2xl sm:text-3xl font-cinzel font-bold text-white mb-2">
+                    Submit Your Research Manuscript
+                </h1>
+                <p class="text-sm text-slate-400">
+                    Fields marked with asterisk (*) are required for editorial intake and plagiarism screening.
+                </p>
+            </div>
+
+            <form id="direct-submit-form" class="space-y-6">
+                <!-- Manuscript Title -->
+                <div>
+                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                        Manuscript Title *
+                    </label>
+                    <input type="text" id="paper-title" required placeholder="e.g. Synthesis and Characterization of Novel Nanomaterials..." class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                </div>
+
+                <!-- Academic Discipline & Department -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                            Academic Discipline *
+                        </label>
+                        <select id="domain" required class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                            <option value="">Select Domain...</option>
+                            <option value="Computer Science">Computer Science & Data Analytics</option>
+                            <option value="Commerce">Commerce & Financial Economics</option>
+                            <option value="History">History & Historiography</option>
+                            <option value="Chemistry">Chemistry & Material Sciences</option>
+                            <option value="Physics">Physics & Applied Photonics</option>
+                            <option value="Mathematics">Pure & Applied Mathematics</option>
+                            <option value="English">English Literature & Cultural Studies</option>
+                            <option value="Hindi">Hindi & Indic Languages</option>
+                            <option value="Political Science">Political Science & Governance</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                            College / Institutional Department *
+                        </label>
+                        <input type="text" id="department" required placeholder="e.g. Department of Computer Science" class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                    </div>
+                </div>
+
+                <!-- Author Information -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                            Corresponding Author Full Name *
+                        </label>
+                        <input type="text" id="author-name" required placeholder="e.g. Dr. Rajesh Sharma" class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                            Institutional Email Address *
+                        </label>
+                        <input type="email" id="author-email" required placeholder="author@shivaji.du.ac.in" class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                    </div>
+                </div>
+
+                <!-- Abstract -->
+                <div>
+                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                        Abstract (Max 350 words) *
+                    </label>
+                    <textarea id="abstract" rows="4" required placeholder="Provide a concise summary of the research questions, methodology, and key contributions..." class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors resize-none"></textarea>
+                </div>
+
+                <!-- Dual File Uploads -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Title Page -->
+                    <div class="border border-slate-700 rounded-xl p-4 bg-dark-900/60">
+                        <label class="block text-xs font-mono uppercase tracking-wider text-slate-200 mb-1 flex items-center gap-1.5">
+                            <i data-lucide="file-text" class="w-3.5 h-3.5 text-gold-400"></i>
+                            <span>1. Title Page / Cover Letter *</span>
+                        </label>
+                        <p class="text-[11px] text-slate-500 mb-3">Includes author names, designations, affiliations & contact emails.</p>
+                        <input type="file" id="cover-file" required accept=".pdf,.doc,.docx" class="block w-full text-xs text-slate-400 file:mr-3 file:py-2 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-dark-700 file:text-gold-400 hover:file:bg-dark-600 cursor-pointer">
+                    </div>
+
+                    <!-- Anonymized Manuscript -->
+                    <div class="border border-gold-500/30 rounded-xl p-4 bg-dark-900/60">
+                        <label class="block text-xs font-mono uppercase tracking-wider text-gold-400 mb-1 flex items-center gap-1.5">
+                            <i data-lucide="shield" class="w-3.5 h-3.5 text-emerald-400"></i>
+                            <span>2. Anonymized Manuscript *</span>
+                        </label>
+                        <p class="text-[11px] text-slate-500 mb-3">Double-blind file: No author names, institutional mentions, or acknowledgments.</p>
+                        <input type="file" id="manuscript-file" required accept=".pdf,.doc,.docx" class="block w-full text-xs text-slate-400 file:mr-3 file:py-2 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-dark-700 file:text-gold-400 hover:file:bg-dark-600 cursor-pointer">
+                    </div>
+                </div>
+
+                <!-- Declaration Checkbox -->
+                <div class="flex items-start gap-3 p-4 rounded-xl bg-dark-900/60 border border-slate-800">
+                    <input type="checkbox" id="declaration" required class="mt-1 rounded bg-dark-800 border-slate-700 text-burgundy-700 focus:ring-burgundy-500">
+                    <label for="declaration" class="text-xs text-slate-300 leading-relaxed cursor-pointer">
+                        I hereby declare that this manuscript represents original scholarship, has not been published or submitted simultaneously elsewhere, and complies with UGC-CARE research integrity regulations and Shivaji College anti-plagiarism guidelines (&lt;10% similarity).
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="submit-btn" class="w-full py-3.5 px-6 rounded-xl bg-burgundy-800 hover:bg-burgundy-700 text-white text-sm font-semibold shadow-lg shadow-burgundy-900/50 transition-all hover:-translate-y-0.5 flex justify-center items-center gap-2">
+                    <i data-lucide="upload" class="w-4 h-4"></i>
+                    <span>Submit Manuscript for Double-Blind Review</span>
+                </button>
+            </form>
+
+            <!-- Success Confirmation Box (Hidden by default) -->
+            <div id="submit-success" class="hidden mt-6 p-6 rounded-xl bg-emerald-950/40 border border-emerald-700/60 text-emerald-200">
+                <div class="flex items-center gap-3 mb-2">
+                    <i data-lucide="check-circle-2" class="w-6 h-6 text-emerald-400"></i>
+                    <h3 class="text-base font-cinzel font-bold text-white">Manuscript Successfully Registered!</h3>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                    Your paper has been securely ingested into the double-blind review queue. A formal receipt and tracking credentials have been logged for dispatch to your institutional email.
+                </p>
+                <div class="p-3 bg-dark-900/90 rounded-lg border border-emerald-500/30 font-mono text-xs text-gold-400 flex items-center justify-between">
+                    <span>Assigned Tracking ID:</span>
+                    <strong id="assigned-tracking-id" class="text-white text-sm">SHIVRAJ-2026-MS-0042</strong>
+                </div>
+                <div class="mt-4 flex gap-3">
+                    <a href="/dashboard/" class="text-xs font-semibold text-gold-400 hover:underline flex items-center gap-1">
+                        <span>Go to Author Dashboard</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+        const form = document.getElementById('direct-submit-form');
+        const successBox = document.getElementById('submit-success');
+        const trackingIdEl = document.getElementById('assigned-tracking-id');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="inline-block animate-spin mr-2">⟳</span> Uploading to Manuscript Vault...';
+            
+            setTimeout(() => {
+                const randomNum = Math.floor(1000 + Math.random() * 9000);
+                const trackingId = `SHIVRAJ-2026-MS-${randomNum}`;
+                trackingIdEl.textContent = trackingId;
+                
+                form.classList.add('hidden');
+                successBox.classList.remove('hidden');
+                lucide.createIcons();
+            }, 1200);
+        });
+    </script>
+</body>
+</html>

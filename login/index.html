@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow Portal Login | Shivraj 350 Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: { 950: '#070A10', 900: '#0B0F19', 800: '#0E131F', 700: '#141B2D', 600: '#182238' },
+                        gold: { 400: '#E5C07B', 500: '#F59E0B', 600: '#D4AF37' },
+                        burgundy: { 700: '#BE123C', 800: '#9F1239', 900: '#881337' }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-900 text-slate-300 font-inter antialiased min-h-screen flex flex-col justify-between selection:bg-gold-600/30 selection:text-gold-400">
+
+    <!-- Top Navigation Header -->
+    <header class="py-6 px-4 sm:px-8 border-b border-slate-800/80 bg-dark-950/70 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="/" class="inline-flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-gold-400 transition-colors">
+                <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                <span>Back to Journal Home</span>
+            </a>
+            <div class="flex items-center gap-4">
+                <a href="/submit/" class="text-xs font-mono text-gold-400 hover:underline">Direct Paper Submission</a>
+                <span class="text-slate-600 text-xs font-mono">|</span>
+                <a href="mailto:shivraj350@shivaji.du.ac.in" class="text-xs font-mono text-slate-400 hover:text-white">
+                    shivraj350@shivaji.du.ac.in
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Authentication Box -->
+    <main class="flex-1 flex items-center justify-center p-4 sm:p-6 my-8">
+        <div class="w-full max-w-xl bg-dark-700 border border-gold-500/30 rounded-2xl shadow-2xl p-8 sm:p-10 relative overflow-hidden">
+            <!-- Ambient glow -->
+            <div class="absolute -top-24 -right-24 w-60 h-60 bg-burgundy-900/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- College Crest & Branding -->
+            <div class="text-center mb-8">
+                <span class="text-xs font-mono text-gold-400 uppercase tracking-widest font-semibold block mb-1">
+                    WORKFLOW PORTAL
+                </span>
+                <h1 class="text-2xl sm:text-3xl font-cinzel font-bold text-white mb-2" id="portal-title">
+                    Author Dashboard Login
+                </h1>
+                <p class="text-xs text-slate-400">
+                    Shivaji College, University of Delhi • Peer-Review Platform
+                </p>
+            </div>
+
+            <!-- Role Selector Tabs -->
+            <div class="grid grid-cols-3 gap-2 p-1.5 bg-dark-900 rounded-xl border border-slate-800 mb-6">
+                <button type="button" class="role-tab py-2.5 px-3 rounded-lg text-xs font-medium transition-all text-gold-400 bg-dark-800 border border-gold-500/40" data-role="author">
+                    Author
+                </button>
+                <button type="button" class="role-tab py-2.5 px-3 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-slate-200" data-role="reviewer">
+                    Reviewer
+                </button>
+                <button type="button" class="role-tab py-2.5 px-3 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-slate-200" data-role="editor">
+                    Editor
+                </button>
+            </div>
+
+            <!-- Dynamic Role Description Card -->
+            <div id="role-info-card" class="bg-dark-900/80 border border-slate-800 rounded-xl p-4 mb-6">
+                <h3 class="text-sm font-semibold text-slate-200 mb-1" id="role-heading">Author Self-Service Station</h3>
+                <p class="text-xs text-slate-400 leading-relaxed" id="role-description">
+                    Track the lifecycle of your submitted papers, review evaluation scorecards, and upload revised camera-ready manuscripts.
+                </p>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-1.5">
+                        Institutional Email Address *
+                    </label>
+                    <input type="email" id="login-email" required value="author@shivaji.du.ac.in" class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center mb-1.5">
+                        <label class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                            Password *
+                        </label>
+                        <a href="#" class="text-[11px] text-gold-400 hover:underline">Forgot?</a>
+                    </div>
+                    <input type="password" id="login-pwd" required value="••••••••••••" class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" id="login-btn" class="w-full py-3.5 px-6 rounded-xl bg-burgundy-800 hover:bg-burgundy-700 text-white text-sm font-semibold shadow-lg shadow-burgundy-900/50 transition-all flex justify-center items-center gap-2">
+                        <i data-lucide="log-in" class="w-4 h-4"></i>
+                        <span id="btn-label">Sign In to Author Dashboard</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Direct Submit Alternative -->
+            <div class="mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-400">
+                <span>Looking to submit a first draft without an account?</span>
+                <a href="/submit/" class="text-gold-400 hover:underline font-semibold ml-1 block sm:inline mt-1 sm:mt-0">
+                    Use Direct Option to Submit →
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 px-4 border-t border-slate-800/80 text-center text-xs text-slate-500 font-mono">
+        Official Workflow Portal • Shivaji College, University of Delhi • Direct Inquiries: <a href="mailto:shivraj350@shivaji.du.ac.in" class="text-gold-400 hover:underline">shivraj350@shivaji.du.ac.in</a>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+
+        const roles = {
+            author: {
+                title: 'Author Dashboard Login',
+                heading: 'Author Self-Service Station',
+                desc: 'Track the lifecycle of your submitted papers, review evaluation scorecards, and upload revised camera-ready manuscripts.',
+                email: 'author@shivaji.du.ac.in',
+                btnText: 'Sign In to Author Dashboard',
+                destination: '/dashboard/'
+            },
+            reviewer: {
+                title: 'Reviewer Portal Access',
+                heading: 'Double-Blind Reviewer Station',
+                desc: 'Access your assigned manuscripts under strict double-blind protocols. Evaluate papers using structured 5-criteria scorecards.',
+                email: 'reviewer@shivaji.du.ac.in',
+                btnText: 'Access Reviewer Portal',
+                destination: '/reviewer/'
+            },
+            editor: {
+                title: 'Editor Access Desk',
+                heading: 'Managing Editorial Console',
+                desc: 'Executive triage desk: review incoming submissions, assign external referees with conflict-of-interest checks, and issue final decisions.',
+                email: 'editor@shivaji.du.ac.in',
+                btnText: 'Enter Editorial Console',
+                destination: '/editor/'
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        let currentRole = params.get('role') || 'author';
+        if (!roles[currentRole]) currentRole = 'author';
+
+        const tabs = document.querySelectorAll('.role-tab');
+        const titleEl = document.getElementById('portal-title');
+        const headingEl = document.getElementById('role-heading');
+        const descEl = document.getElementById('role-description');
+        const emailEl = document.getElementById('login-email');
+        const btnLabel = document.getElementById('btn-label');
+        const form = document.getElementById('login-form');
+
+        const updateRoleUI = (role) => {
+            currentRole = role;
+            const r = roles[role];
+            titleEl.textContent = r.title;
+            headingEl.textContent = r.heading;
+            descEl.textContent = r.desc;
+            emailEl.value = r.email;
+            btnLabel.textContent = r.btnText;
+
+            tabs.forEach(tab => {
+                const active = tab.dataset.role === role;
+                tab.classList.toggle('text-gold-400', active);
+                tab.classList.toggle('bg-dark-800', active);
+                tab.classList.toggle('border', active);
+                tab.classList.toggle('border-gold-500/40', active);
+                tab.classList.toggle('text-slate-400', !active);
+            });
+        };
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => updateRoleUI(tab.dataset.role));
+        });
+
+        updateRoleUI(currentRole);
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            btnLabel.innerHTML = '<span class="inline-block animate-spin mr-2">⟳</span> Authenticating...';
+            setTimeout(() => {
+                window.location.href = roles[currentRole].destination;
+            }, 600);
+        });
+    </script>
+</body>
+</html>
